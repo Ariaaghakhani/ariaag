@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+@font-face {
+  font-family: "Syne", sans-serif;
+  src: url(../font/Syne-VariableFont_wght.ttf);
+}
+@keyframes border-transform {
+  0%, 100% {
+    border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header h1 {
+    font-size: 36px;
+  }
+  .header h6 {
+    font-size: 12px !important;
+  }
+  .services h2 {
+    font-size: 45px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header h1 {
+    font-size: 60px;
+  }
+  .header h6 {
+    font-size: 16px;
+  }
+}
+body {
+  background-color: #18191d;
+}
+body main {
+  font-family: "Syne", sans-serif;
+}
+body main .headTop img {
+  width: 170px;
+  height: 40px;
+}
+body main p {
+  font-size: 16px;
+  color: #868a9b;
+  line-height: 28px;
+  font-weight: 400;
+}
+body main .menuToggle {
+  position: relative;
+}
+body main .menuToggle input {
+  position: absolute;
+  visibility: 0;
+  opacity: 0;
+}
+body main .menuToggle input:checked ~ .nav {
+  transition: 0.3s ease;
+  right: 0;
+}
+body main .menuToggle input:checked ~ .nav > ul > li:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle input:checked ~ .nav > ul > li:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.75s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle input:checked ~ .nav > ul > li:nth-of-type(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.9s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle input:checked ~ .nav > ul > li:nth-of-type(4) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.05s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle input:checked ~ .nav > ul > li:nth-of-type(5) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle input:checked ~ .hamMenu > span {
+  top: 0px;
+}
+body main .menuToggle input:checked ~ .hamMenu > span:nth-of-type(1) {
+  transform: rotateZ(-45deg);
+}
+body main .menuToggle input:checked ~ .hamMenu > span:nth-of-type(2) {
+  transform: rotateZ(45deg);
+}
+body main .menuToggle label {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 12;
+  cursor: pointer;
+}
+body main .menuToggle .hamMenu {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-content: space-evenly;
+  position: relative;
+  top: 0;
+}
+body main .menuToggle .hamMenu > span {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  margin: 20px auto;
+  transition: 0.4s ease;
+  z-index: 11;
+}
+body main .menuToggle .hamMenu > span:nth-of-type(1) {
+  transform: translateY(-2px);
+}
+body main .menuToggle .hamMenu > span:nth-of-type(2) {
+  transform: translateY(8px);
+}
+body main .menuToggle .hamMenu > span:hover:nth-of-type(1) {
+  transform: translateY(-3px);
+}
+body main .menuToggle .hamMenu > span:hover:nth-of-type(2) {
+  transform: translateY(7px);
+}
+body main .menuToggle .nav {
+  width: 340px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  right: -340px;
+  top: 0;
+  transition-delay: 1.3s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+body main .menuToggle .nav > ul {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 40% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .menuToggle .nav > ul > li {
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+body main .menuToggle .nav > ul > li:nth-of-type(1) {
+  transition-delay: 0.4s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+body main .menuToggle .nav > ul > li:nth-of-type(2) {
+  transition-delay: 0.55s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle .nav > ul > li:nth-of-type(3) {
+  transition-delay: 0.7s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle .nav > ul > li:nth-of-type(4) {
+  transition-delay: 0.85s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle .nav > ul > li:nth-of-type(5) {
+  transition-delay: 1s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+body main .menuToggle .nav > ul > li > a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-family: "Syne", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #212228;
+  line-height: 28px;
+  margin: 0 auto;
+  transition: 0.4s;
+}
+body main .menuToggle .nav > ul > li > a:hover {
+  color: #868a9b;
+  transition: 0.4s;
+}
+body main .header {
+  font-family: "syne", sans-serif;
+}
+body main .header img {
+  animation: border-transform 10s linear infinite alternate forwards;
+}
+body main .header h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  text-shadow: #212228 2px 2px 0;
+}
+body main .header h6 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: #212228 1px 1px 0;
+}
+body main .header p {
+  font-size: 16px;
+  color: #868a9b;
+  line-height: 28px;
+  font-weight: 400;
+}
+body main .header a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  position: relative;
+}
+body main .header a::after {
+  position: absolute;
+  content: "";
+  height: 64px;
+  width: 64px;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(134, 138, 155, 0.2);
+  border-radius: 50%;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+body main .header a:hover::after {
+  left: calc(100% - 64px);
+}
+body main .header .header_text1 {
+  transform: translateX(-16%) translateY(10%);
+}
+body main .services {
+  font-family: "syne", sans-serif;
+}
+body main .services h5 {
+  color: #868a9b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+body main .services h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+body main .services .box {
+  background-color: white;
+  transition: 0.3s ease;
+  height: 350px;
+}
+body main .services .box i {
+  font-size: 60px;
+  color: #212228;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
+body main .services .box h3 {
+  font-size: 24px;
+  color: #212228;
+  font-weight: 700;
+}
+body main .services .box p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #212228;
+}
+body main .services .box svg {
+  height: 60px;
+}
+body main .services .box svg text {
+  font-family: "syne", sans-serif;
+  font-size: 48px;
+  fill: transparent;
+  stroke-width: 1px;
+  stroke: #868a9b;
+  opacity: 0.6;
+  font-weight: 900;
+}
+body main .services .box:hover {
+  background-color: #212228;
+  transition: 0.3s ease;
+}
+body main .services .box:hover > i {
+  color: white;
+  transition: 0.3s ease;
+}
+body main .services .box:hover > h3 {
+  color: white;
+  transition: 0.3s ease;
+}
+body main .services .box:hover > p {
+  color: white;
+  transition: 0.3s ease;
+}/*# sourceMappingURL=master.css.map */
