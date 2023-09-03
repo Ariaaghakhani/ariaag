@@ -36,6 +36,9 @@
   .services h2 {
     font-size: 45px !important;
   }
+  .about h2 {
+    font-size: 45px !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .header h1 {
@@ -282,7 +285,7 @@ body main .header a:hover::after {
   left: calc(100% - 64px);
 }
 body main .header .header_text1 {
-  transform: translateX(-16%) translateY(10%);
+  transform: translateX(-10%) translateY(10%);
 }
 body main .services {
   font-family: "syne", sans-serif;
@@ -302,6 +305,7 @@ body main .services .box {
   background-color: white;
   transition: 0.3s ease;
   height: 350px;
+  cursor: default;
 }
 body main .services .box i {
   font-size: 60px;
@@ -346,4 +350,155 @@ body main .services .box:hover > h3 {
 body main .services .box:hover > p {
   color: white;
   transition: 0.3s ease;
+}
+body main .about {
+  font-family: "syne", sans-serif;
+}
+body main .about h5 {
+  color: #868a9b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+body main .about h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+body main .about a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  position: relative;
+}
+body main .about a::after {
+  position: absolute;
+  content: "";
+  height: 64px;
+  width: 64px;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(134, 138, 155, 0.2);
+  border-radius: 50%;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+body main .about a:hover::after {
+  left: calc(100% - 64px);
+}
+body main .about h6 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #868a9b;
+  text-transform: capitalize;
+}
+body main .about .percent {
+  width: 100%;
+  height: 10px;
+  background-color: #212228;
+  border-radius: 10px;
+  position: relative;
+}
+body main .about .percent::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: white;
+  left: 0;
+  top: 0;
+  width: 1%;
+  border-radius: 10px;
+}
+body main .about .percent:nth-of-type(1)::after {
+  width: 100%;
+}
+body main .about .percent:nth-of-type(2)::after {
+  width: 90%;
+}
+body main .about .percent:nth-of-type(3)::after {
+  width: 85%;
+}
+body main .about .percent:nth-of-type(4)::after {
+  width: 90%;
+}
+body main .about .percent:nth-of-type(5)::after {
+  width: 90%;
+}
+body main .about .percent:nth-of-type(6)::after {
+  width: 90%;
+}
+body main .about .percent:nth-of-type(7)::after {
+  width: 90%;
+}
+body main .portfolio h5 {
+  color: #868a9b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+}
+body main .portfolio h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+}
+body main .portfolio .port_slider {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+}
+body main .portfolio .port_slider figure {
+  width: 30vw;
+  display: flex;
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+}
+body main .portfolio .port_slider figure:hover figcaption {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.4s ease;
+}
+body main .portfolio .port_slider figure:hover img {
+  transform: scale(90%);
+  transition: 0.4s ease;
+  opacity: 0.4;
+}
+body main .portfolio .port_slider figure img {
+  width: 100%;
+  transition: 0.4s ease;
+}
+body main .portfolio .port_slider figure figcaption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  transition: 0.4s ease;
+}
+body main .portfolio .port_slider figure figcaption > h6 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+}
+body main .portfolio .port_slider figure figcaption > p {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
 }/*# sourceMappingURL=master.css.map */
