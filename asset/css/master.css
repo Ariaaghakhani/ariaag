@@ -501,4 +501,9 @@ body main .portfolio .port_slider figure figcaption > p {
   font-size: 16px;
   font-weight: 400;
   color: white;
+}
+body .testimonial {
+  background-image: url(../img/banner.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }/*# sourceMappingURL=master.css.map */
