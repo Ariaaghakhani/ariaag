@@ -379,16 +379,16 @@ body main .about a {
 body main .about a::after {
   position: absolute;
   content: "";
-  height: 64px;
-  width: 64px;
+  height: 70px;
+  width: 70px;
   top: 0;
   left: 0;
-  border: 1px solid rgba(134, 138, 155, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 body main .about a:hover::after {
-  left: calc(100% - 64px);
+  left: calc(100% - 70px);
 }
 body main .about h6 {
   font-size: 16px;
@@ -446,13 +446,7 @@ body main .portfolio h2 {
   font-size: 60px;
   font-weight: 700;
 }
-body main .portfolio .port_slider {
-  width: 100vw;
-  position: absolute;
-  left: 0;
-}
 body main .portfolio .port_slider figure {
-  width: 30vw;
   display: flex;
   position: relative;
   z-index: 20;
@@ -503,7 +497,78 @@ body main .portfolio .port_slider figure figcaption > p {
   color: white;
 }
 body .testimonial {
+  font-family: "syne", sans-serif;
   background-image: url(../img/banner.jpg);
   background-attachment: fixed;
   background-size: cover;
+}
+body .testimonial h4 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+}
+body .testimonial a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 20px;
+  position: relative;
+}
+body .testimonial a::after {
+  position: absolute;
+  content: "";
+  height: 70px;
+  width: 70px;
+  top: 0;
+  left: 0;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+body .testimonial a:hover::after {
+  left: calc(100% - 70px);
+}
+body .testimonial .client {
+  background-color: white;
+}
+body .testimonial .client h3 {
+  color: #18191d;
+  font-size: 24px;
+  font-weight: 700;
+}
+body .testimonial .client p {
+  color: #868a9b;
+  font-size: 16px;
+  font-weight: 400;
+}
+body .testimonial .client figure {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body .testimonial .client figure img {
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .testimonial .client .quote {
+  width: 25%;
+  position: relative;
+}
+body .testimonial .client .quote i {
+  position: absolute;
+  color: rgba(134, 138, 155, 0.2);
+  font-size: 100px;
+  top: 0;
+  left: 0;
+  transform: translateY(-25%);
 }/*# sourceMappingURL=master.css.map */
