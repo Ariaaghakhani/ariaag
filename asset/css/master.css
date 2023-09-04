@@ -39,6 +39,10 @@
   .about h2 {
     font-size: 45px !important;
   }
+  .client {
+    transform: translateY(0%) !important;
+    margin-bottom: 80px;
+  }
 }
 @media screen and (min-width: 768px) {
   .header h1 {
@@ -277,7 +281,7 @@ body main .header a::after {
   width: 64px;
   top: 0;
   left: 0;
-  border: 1px solid rgba(134, 138, 155, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -304,7 +308,6 @@ body main .services h2 {
 body main .services .box {
   background-color: white;
   transition: 0.3s ease;
-  height: 350px;
   cursor: default;
 }
 body main .services .box i {
@@ -394,7 +397,6 @@ body main .about h6 {
   font-size: 16px;
   font-weight: 700;
   color: #868a9b;
-  text-transform: capitalize;
 }
 body main .about .percent {
   width: 100%;
@@ -417,22 +419,22 @@ body main .about .percent:nth-of-type(1)::after {
   width: 100%;
 }
 body main .about .percent:nth-of-type(2)::after {
-  width: 90%;
+  width: 95%;
 }
 body main .about .percent:nth-of-type(3)::after {
-  width: 85%;
+  width: 80%;
 }
 body main .about .percent:nth-of-type(4)::after {
   width: 90%;
 }
 body main .about .percent:nth-of-type(5)::after {
-  width: 90%;
+  width: 85%;
 }
 body main .about .percent:nth-of-type(6)::after {
-  width: 90%;
+  width: 80%;
 }
 body main .about .percent:nth-of-type(7)::after {
-  width: 90%;
+  width: 85%;
 }
 body main .portfolio h5 {
   color: #868a9b;
@@ -533,7 +535,9 @@ body .testimonial a:hover::after {
   left: calc(100% - 70px);
 }
 body .testimonial .client {
+  transform: translateY(20%);
   background-color: white;
+  padding: 8% 0;
 }
 body .testimonial .client h3 {
   color: #18191d;
@@ -571,4 +575,44 @@ body .testimonial .client .quote i {
   top: 0;
   left: 0;
   transform: translateY(-25%);
+}
+body .testimonial .logoBanner {
+  background-color: #18191d;
+  height: 120px;
+}
+body .testimonial .logoBanner img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body footer {
+  background-color: #212228;
+  font-family: "syne", sans-serif;
+}
+body footer h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+body footer p {
+  color: #868a9b;
+  font-size: 16px;
+  font-weight: 400;
+}
+body footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px !important;
+  height: 40px !important;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0 10px;
+  border: 1px solid rgba(134, 138, 155, 0.4);
+}
+body footer a > i {
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
 }/*# sourceMappingURL=master.css.map */

@@ -65,6 +65,11 @@ $blackLink: #212228;
             font-size: 45px !important;
         }
     }
+
+    .client{
+        transform: translateY(0%)!important;
+        margin-bottom: 80px;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -380,7 +385,7 @@ body {
                     width: 64px;
                     top: 0;
                     left: 0;
-                    border: 1px solid rgba($gray, .2);
+                    border: 1px solid rgba(white, .4);
                     border-radius: 50%;
                     transition: .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 }
@@ -415,7 +420,7 @@ body {
             .box {
                 background-color: white;
                 transition: .3s ease;
-                height: 350px;
+                // height: 450px;
                 cursor: default;
 
                 i {
@@ -516,7 +521,10 @@ body {
                 font-size: 16px;
                 font-weight: 700;
                 color: $gray;
-                text-transform: capitalize;
+
+                &:nth-of-type(7){
+
+                }
             }
 
             .percent{
@@ -540,22 +548,22 @@ body {
                     width:100%
                 }
                 &:nth-of-type(2)::after{
-                    width:90%
+                    width:95%
                 }
                 &:nth-of-type(3)::after{
-                    width:85%
+                    width:80%
                 }
                 &:nth-of-type(4)::after{
                     width:90%
                 }
                 &:nth-of-type(5)::after{
-                    width:90%
+                    width:85%
                 }
                 &:nth-of-type(6)::after{
-                    width:90%
+                    width:80%
                 }
                 &:nth-of-type(7)::after{
-                    width:90%
+                    width:85%
                 }
             }
         }
@@ -679,7 +687,9 @@ body {
         }
 
         .client{
+            transform: translateY(20%);
             background-color: white;
+            padding: 8% 0;
             h3{
                 color: $black;
                 font-size: 24px;
@@ -707,6 +717,8 @@ body {
             .quote{
                 width: 25%;
                 position: relative;
+
+                
                 i{
                     position: absolute;
                     color: rgba($gray, .2);
@@ -715,6 +727,50 @@ body {
                     left: 0;
                     transform: translateY(-25%);
                 }
+            }
+        }
+
+        .logoBanner{
+            background-color: $black;
+            height: 120px;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    footer{
+        background-color: $blackLink;
+        // height: 200px;
+        font-family: 'syne', sans-serif;
+        h4{
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p{
+            color: $gray;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            width: 40px!important;
+            height: 40px!important;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            margin:0 10px ;
+            border: 1px solid rgba($gray, .4);
+            >i{
+                text-align: center;
+                align-items: center;
+                font-size: 14px;
             }
         }
     }
